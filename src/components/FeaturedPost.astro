@@ -1,0 +1,51 @@
+---
+import { formatDate } from '../utils/date';
+
+interface Props {
+  post: {
+    slug: string;
+    title: string;
+    description: string;
+    pubDate: Date;
+    category: string;
+    image?: string;
+  };
+}
+
+const { post } = Astro.props;
+const formattedDate = formatDate(post.pubDate);
+---
+
+<article class="relative overflow-hidden group">
+  <a href={`/blog/${post.slug}`} class="block">
+    <div class="aspect-[16/9] bg-primary-100 dark:bg-primary-800 overflow-hidden rounded-xl mb-4">
+      {post.image ? (
+        <img 
+          src={post.image} 
+          alt={post.title} 
+          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
+      ) : (
+        <div class="w-full h-full flex items-center justify-center bg-primary-200 dark:bg-primary-800">
+          <span class="text-primary-500 dark:text-primary-400 font-mono">cssamurai</span>
+        </div>
+      )}
+    </div>
+    
+    <div class="space-y-2">
+      <span class="text-xs font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider">
+        {post.category}
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-bold leading-tight group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
+        {post.title}
+      </h2>
+      <p class="text-primary-600 dark:text-primary-400 line-clamp-2">
+        {post.description}
+      </p>
+      <div class="text-sm text-primary-500 dark:text-primary-400">
+        {formattedDate}
+      </div>
+    </div>
+  </a>
+</article>
