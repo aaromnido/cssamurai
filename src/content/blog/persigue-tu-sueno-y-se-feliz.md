@@ -2,7 +2,7 @@
 title: "Persigue tu sueño y sé feliz"
 description: "Reflexiones personales sobre la importancia de perseguir los sueños y el reto de volver a correr una maratón."
 pubDate: 2013-09-25
-category: "Design"
+category: "Personal"
 image: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 imageOptional: "maraton-0831192415-zoom.jpg"
 readingTime: "4"
