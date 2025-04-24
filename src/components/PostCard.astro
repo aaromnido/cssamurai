@@ -36,12 +36,12 @@ const formattedDate = formatDate(post.pubDate);
     
     <div class="flex-grow space-y-2">
       <div class="flex items-center text-xs gap-3">
-        <span class="font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider">
-          {post.category}
-        </span>
+        <a href={`/category/${post.category.toLowerCase() === 'politics' ? 'politica' : post.category.toLowerCase() === 'design' ? 'diseno' : 'tecnologia'}`} class="font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider">
+          {post.category === 'Politics' ? 'Política' : post.category === 'Design' ? 'Diseño' : post.category === 'Technology' ? 'Tecnología' : post.category}
+        </a>
         {post.readingTime && (
           <span class="text-primary-500 dark:text-primary-400">
-            {post.readingTime}
+            {post.readingTime.replace('min read', 'min de lectura')}
           </span>
         )}
       </div>

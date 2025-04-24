@@ -9,7 +9,7 @@ const featuredPost = {
   title: 'The Intersection of Politics and Design',
   description: 'Exploring how political movements have utilized design principles to communicate their message effectively throughout history.',
   pubDate: new Date('2023-11-15'),
-  category: 'Politics',
+  category: 'Política',
   image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   readingTime: '6 min read'
 };
@@ -20,7 +20,7 @@ const recentPosts = [
     title: 'Ethical Considerations in UI Design',
     description: 'How designers should approach ethical dilemmas in user interface design to create more inclusive and responsible products.',
     pubDate: new Date('2023-11-10'),
-    category: 'Design',
+    category: 'Diseño',
     image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     readingTime: '4 min read'
   },
@@ -29,7 +29,7 @@ const recentPosts = [
     title: 'The Rise of AI in Content Creation',
     description: 'Examining how artificial intelligence is changing the landscape of content creation and what it means for creators.',
     pubDate: new Date('2023-11-05'),
-    category: 'Technology',
+    category: 'Tecnología',
     image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     readingTime: '5 min read'
   },
@@ -38,7 +38,7 @@ const recentPosts = [
     title: 'Censorship in Digital Media',
     description: 'A critical analysis of how censorship manifests in digital platforms and its implications for free speech.',
     pubDate: new Date('2023-10-28'),
-    category: 'Politics',
+    category: 'Política',
     image: 'https://images.pexels.com/photos/6953525/pexels-photo-6953525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     readingTime: '7 min read'
   },
@@ -47,7 +47,7 @@ const recentPosts = [
     title: 'Minimalism in Web Design',
     description: 'Why less continues to be more in the evolution of web design, and how to apply minimalist principles effectively.',
     pubDate: new Date('2023-10-20'),
-    category: 'Design',
+    category: 'Diseño',
     image: 'https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     readingTime: '3 min read'
   },
@@ -56,7 +56,7 @@ const recentPosts = [
     title: 'The Open Source Software Revolution',
     description: 'How open source has transformed software development and why it matters for the future of technology.',
     pubDate: new Date('2023-10-15'),
-    category: 'Technology',
+    category: 'Tecnología',
     image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     readingTime: '6 min read'
   },
@@ -72,46 +72,46 @@ const recentPosts = [
 ];
 
 const categories = [
-  { name: 'Politics', count: 3 },
-  { name: 'Design', count: 2 },
-  { name: 'Technology', count: 2 }
+  { name: 'Política', count: 3 },
+  { name: 'Diseño', count: 2 },
+  { name: 'Tecnología', count: 2 }
 ];
 ---
 
 <Layout>
   <section class="mb-16">
     <div class="max-w-2xl">
-      <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">So many mind, no mind!</h1>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">¡Tantas mentes, ninguna mente!</h1>
       <p class="text-xl text-primary-700 dark:text-primary-300 mb-8">
-        Welcome to my corner of the web where I share thoughts on the intersections of politics, design, and technology.
+        Bienvenido a mi rincón de la web donde comparto pensamientos sobre las intersecciones de política, diseño y tecnología.
       </p>
       <div class="flex space-x-4">
         <a 
           href="/blog" 
           class="px-5 py-2.5 bg-accent-600 hover:bg-accent-700 text-white font-medium rounded-md transition-colors"
         >
-          Read the Blog
+          Leer el Blog
         </a>
         <a 
           href="/about" 
           class="px-5 py-2.5 bg-primary-100 dark:bg-primary-800 hover:bg-primary-200 dark:hover:bg-primary-700 text-primary-900 dark:text-primary-100 font-medium rounded-md transition-colors"
         >
-          About Me
+          Sobre Mí
         </a>
       </div>
     </div>
   </section>
   
   <section class="mb-16">
-    <h2 class="text-2xl font-bold mb-8">Featured Post</h2>
+    <h2 class="text-2xl font-bold mb-8">Publicación Destacada</h2>
     <FeaturedPost post={featuredPost} />
   </section>
   
   <section class="mb-16">
     <div class="flex justify-between items-center mb-8">
-      <h2 class="text-2xl font-bold">Recent Posts</h2>
+      <h2 class="text-2xl font-bold">Publicaciones Recientes</h2>
       <a href="/blog" class="text-accent-600 dark:text-accent-400 hover:underline text-sm font-medium">
-        View all posts →
+        Ver todas las publicaciones →
       </a>
     </div>
     
@@ -123,15 +123,15 @@ const categories = [
   </section>
   
   <section>
-    <h2 class="text-2xl font-bold mb-8">Categories</h2>
+    <h2 class="text-2xl font-bold mb-8">Categorías</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {categories.map(category => (
         <a 
-          href={`/category/${category.name.toLowerCase()}`} 
+          href={`/category/${category.name === 'Política' ? 'politica' : category.name === 'Diseño' ? 'diseno' : 'tecnologia'}`} 
           class="p-6 bg-white dark:bg-primary-900 rounded-lg border border-primary-100 dark:border-primary-800 hover:border-accent-400 dark:hover:border-accent-400 transition-colors"
         >
           <h3 class="font-bold text-lg mb-1">{category.name}</h3>
-          <p class="text-primary-500 dark:text-primary-400 text-sm">{category.count} {category.count === 1 ? 'post' : 'posts'}</p>
+          <p class="text-primary-500 dark:text-primary-400 text-sm">{category.count} {category.count === 1 ? 'publicación' : 'publicaciones'}</p>
         </a>
       ))}
     </div>

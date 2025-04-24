@@ -20,10 +20,10 @@ const formattedDate = formatDate(post.data.pubDate);
   <article class="max-w-prose mx-auto">
     <header class="mb-8">
       <a 
-        href={`/category/${post.data.category.toLowerCase()}`}
+        href={`/category/${post.data.category.toLowerCase() === 'politics' ? 'politica' : post.data.category.toLowerCase() === 'design' ? 'diseno' : 'tecnologia'}`}
         class="inline-block text-sm font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider mb-2"
       >
-        {post.data.category}
+        {post.data.category === 'Politics' ? 'Política' : post.data.category === 'Design' ? 'Diseño' : post.data.category === 'Technology' ? 'Tecnología' : post.data.category}
       </a>
       <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">{post.data.title}</h1>
       <p class="text-lg text-primary-700 dark:text-primary-300 mb-4">{post.data.description}</p>

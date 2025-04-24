@@ -34,9 +34,9 @@ const formattedDate = formatDate(post.pubDate);
     </div>
     
     <div class="space-y-2">
-      <span class="text-xs font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider">
-        {post.category}
-      </span>
+      <a href={`/category/${post.category.toLowerCase() === 'politics' ? 'politica' : post.category.toLowerCase() === 'design' ? 'diseno' : 'tecnologia'}`} class="text-xs font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider">
+        {post.category === 'Politics' ? 'Política' : post.category === 'Design' ? 'Diseño' : post.category === 'Technology' ? 'Tecnología' : post.category}
+      </a>
       <h2 class="text-2xl sm:text-3xl font-bold leading-tight group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
         {post.title}
       </h2>
