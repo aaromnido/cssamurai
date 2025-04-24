@@ -2,7 +2,7 @@
 title: "Ese apocalipsis que te llega tres días antes"
 description: "Reflexiones personales sobre un despido laboral inesperado y las lecciones aprendidas de esta experiencia."
 pubDate: 2012-12-18
-category: "Personal"
+category: "Design"
 image: "https://images.pexels.com/photos/3760810/pexels-photo-3760810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 readingTime: "4 min read"
 ---
