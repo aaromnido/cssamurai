@@ -58,27 +58,34 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </script>
 
     <style is:global>
-      article {
+      article, .prose {
         font-family: 'sohne', 'Helvetica Neue', Arial, sans-serif;
         font-size: 20px;
         line-height: 1.8;
         letter-spacing: -0.003em;
       }
       
-      article p {
+      article p, .prose p {
         margin-bottom: 1.2em; /* Más espacio entre párrafos */
       }
       
-      article h1, article h2, article h3 {
+      article h1, article h2, article h3, .prose h1, .prose h2, .prose h3 {
         font-family: 'gt-super', Georgia, Cambria, "Times New Roman", Times, serif;
         letter-spacing: -0.015em;
       }
       
-      article h2 {
+      article h2, .prose h2 {
         font-weight: 700; /* Negrita para los H2 */
         margin-top: 0.2em; /* Más espacio arriba */
         margin-bottom: 0.2em; /* Más espacio abajo */
         font-size: 1.2em; /* Tamaño ligeramente mayor */
+      }
+      
+      article h3, .prose h3 {
+        font-weight: 700; /* Negrita para los H3 */
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        font-size: 1.1em;
       }
     </style>
   </head>
