@@ -65,9 +65,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         letter-spacing: -0.003em;
       }
       
+      article p {
+        margin-bottom: 1.2em; /* Más espacio entre párrafos */
+      }
+      
       article h1, article h2, article h3 {
         font-family: 'gt-super', Georgia, Cambria, "Times New Roman", Times, serif;
         letter-spacing: -0.015em;
+      }
+      
+      article h2 {
+        font-weight: 700; /* Negrita para los H2 */
+        margin-top: 0.2em; /* Más espacio arriba */
+        margin-bottom: 0.2em; /* Más espacio abajo */
+        font-size: 1.2em; /* Tamaño ligeramente mayor */
       }
     </style>
   </head>
