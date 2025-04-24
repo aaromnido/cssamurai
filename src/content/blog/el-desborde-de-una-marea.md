@@ -4,6 +4,7 @@ description: "Reflexiones sobre la necesidad de confluencia política y el papel
 pubDate: 2015-07-15
 category: "Politics"
 image: "https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+imageOptional: "fondocolor4-1024x683.jpg"
 readingTime: "3"
 ---
 

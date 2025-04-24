@@ -4,6 +4,7 @@ description: "Visión y propuestas para el desarrollo de Aragón basado en la ec
 pubDate: 2015-02-10
 category: "Technology"
 image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+imageOptional: "desktop-bg.jpg"
 readingTime: "4"
 ---
 

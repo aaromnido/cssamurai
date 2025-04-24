@@ -4,6 +4,7 @@ description: "Una metáfora sobre la convivencia política en España y las posi
 pubDate: 2016-03-15
 category: "Politics"
 image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+imageOptional: "ninosjugandoalfutbol-624x468.gif"
 readingTime: "3"
 ---
 

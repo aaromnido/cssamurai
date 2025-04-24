@@ -4,6 +4,7 @@ description: "Reflexiones sobre la corrupción política en España y la necesid
 pubDate: 2013-02-01
 category: "Politics"
 image: "https://images.pexels.com/photos/2265488/pexels-photo-2265488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+imageOptional: "corrupcion-624x596.gif"
 readingTime: "3"
 ---
 

@@ -4,6 +4,7 @@ description: "Reflexiones personales sobre la importancia de perseguir los sueñ
 pubDate: 2013-09-25
 category: "Design"
 image: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+imageOptional: "maraton-0831192415-zoom.jpg"
 readingTime: "4"
 ---
 

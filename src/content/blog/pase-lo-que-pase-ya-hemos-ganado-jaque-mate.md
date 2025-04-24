@@ -4,6 +4,7 @@ description: "Análisis político sobre la situación en España utilizando el a
 pubDate: 2016-06-20
 category: "Politics"
 image: "https://images.pexels.com/photos/277124/pexels-photo-277124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+imageOptional: "jaque-mate.jpg"
 readingTime: "5"
 ---
 

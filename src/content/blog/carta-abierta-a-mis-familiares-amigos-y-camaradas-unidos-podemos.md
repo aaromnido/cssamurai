@@ -4,6 +4,7 @@ description: "Reflexiones personales sobre el momento político en España y las
 pubDate: 2016-06-10
 category: "Politics"
 image: "https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+imageOptional: "unidos-podemos.png"
 readingTime: "4"
 ---
 

@@ -4,6 +4,7 @@ description: "Experiencia impartiendo un taller de HTML para niños y las leccio
 pubDate: 2014-01-05
 category: "Technology"
 image: "https://images.pexels.com/photos/1181243/pexels-photo-1181243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+imageOptional: "la-foto1-e1357154423799.jpg"
 readingTime: "3"
 ---
 
