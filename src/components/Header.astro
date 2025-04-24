@@ -1,9 +1,51 @@
 ---
+import { getCollection } from 'astro:content';
+
+// Obtener todos los artículos del blog
+const allBlogPosts = await getCollection('blog');
+
+// Extraer categorías únicas de los artículos
+const categories = new Set();
+allBlogPosts.forEach(post => {
+  categories.add(post.data.category);
+});
+
+// Función para traducir categorías de inglés a español
+function translateCategory(category: string) {
+  switch(category) {
+    case 'Politics': return 'Política';
+    case 'Design': return 'Diseño';
+    case 'Technology': return 'Tecnología';
+    case 'Personal': return 'Personal';
+    default: return category;
+  }
+}
+
+// Función para convertir categoría a slug
+function categoryToSlug(category: string) {
+  switch(category) {
+    case 'Política': return 'politica';
+    case 'Diseño': return 'diseno';
+    case 'Tecnología': return 'tecnologia';
+    case 'Personal': return 'personal';
+    default: return category.toLowerCase();
+  }
+}
+
+// Crear items de navegación dinámicamente
+const categoryItems = Array.from(categories).map((category: unknown) => {
+  const categoryString = translateCategory(String(category));
+  const slug = categoryToSlug(categoryString);
+  return {
+    label: categoryString,
+    url: `/category/${slug}`
+  };
+}).sort((a, b) => a.label.localeCompare(b.label)); // Ordenar alfabéticamente
+
+// Agregar items fijos
 const navItems = [
   { label: 'Inicio', url: '/' },
-  { label: 'Política', url: '/category/politica' },
-  { label: 'Diseño', url: '/category/diseno' },
-  { label: 'Tecnología', url: '/category/tecnologia' },
+  ...categoryItems,
   { label: 'Acerca de mí', url: '/acerca-de-mi' },
 ];
 

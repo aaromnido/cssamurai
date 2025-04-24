@@ -12,6 +12,7 @@ export async function getStaticPaths() {
       case 'Politics': return 'Política';
       case 'Design': return 'Diseño';
       case 'Technology': return 'Tecnología';
+      case 'Personal': return 'Personal';
       default: return category;
     }
   }
@@ -29,6 +30,7 @@ export async function getStaticPaths() {
     const categorySlug = categoryString === 'Política' ? 'politica' : 
                          categoryString === 'Diseño' ? 'diseno' : 
                          categoryString === 'Tecnología' ? 'tecnologia' : 
+                         categoryString === 'Personal' ? 'personal' : 
                          categoryString.toLowerCase();
     
     return {
@@ -54,6 +56,7 @@ const filteredPosts = sortedPosts.filter(post => {
       case 'Politics': return 'Política';
       case 'Design': return 'Diseño';
       case 'Technology': return 'Tecnología';
+      case 'Personal': return 'Personal';
       default: return cat;
     }
   })(post.data.category);
@@ -69,6 +72,7 @@ const filteredPosts = sortedPosts.filter(post => {
       {category === 'Política' && 'Análisis y comentarios sobre movimientos políticos, políticas y problemas sociales.'}
       {category === 'Diseño' && 'Explorando principios, tendencias y casos de estudio en diseño a través de varios medios.'}
       {category === 'Tecnología' && 'Perspectivas sobre tecnologías emergentes, tendencias digitales y su impacto en la sociedad.'}
+      {category === 'Personal' && 'Reflexiones personales, experiencias y pensamientos sobre diversos aspectos de la vida.'}
     </p>
   </div>
   
@@ -80,36 +84,76 @@ const filteredPosts = sortedPosts.filter(post => {
       >
         Todos
       </a>
-      <a 
-        href="/category/politica" 
-        class={`inline-flex px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${
-          category === 'Política' 
-            ? 'bg-accent-600 text-white' 
-            : 'bg-white dark:bg-primary-900 border border-primary-200 dark:border-primary-700 text-primary-700 dark:text-primary-300 hover:border-accent-400 dark:hover:border-accent-400 transition-colors'
-        }`}
-      >
-        Política
-      </a>
-      <a 
-        href="/category/diseno" 
-        class={`inline-flex px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${
-          category === 'Diseño' 
-            ? 'bg-accent-600 text-white' 
-            : 'bg-white dark:bg-primary-900 border border-primary-200 dark:border-primary-700 text-primary-700 dark:text-primary-300 hover:border-accent-400 dark:hover:border-accent-400 transition-colors'
-        }`}
-      >
-        Diseño
-      </a>
-      <a 
-        href="/category/tecnologia" 
-        class={`inline-flex px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${
-          category === 'Tecnología' 
-            ? 'bg-accent-600 text-white' 
-            : 'bg-white dark:bg-primary-900 border border-primary-200 dark:border-primary-700 text-primary-700 dark:text-primary-300 hover:border-accent-400 dark:hover:border-accent-400 transition-colors'
-        }`}
-      >
-        Tecnología
-      </a>
+      
+      {/* Generar dinámicamente las pills de categorías */}
+      {(() => {
+        // Obtener todas las categorías únicas de los posts
+        const uniqueCategories = Array.from(new Set(sortedPosts.map(post => post.data.category)));
+        
+        // Ordenar las categorías alfabéticamente antes de mapearlas
+        const sortedCategories = [...uniqueCategories].sort((a, b) => {
+          const aTranslated = (function(c) {
+            switch(c) {
+              case 'Politics': return 'Política';
+              case 'Design': return 'Diseño';
+              case 'Technology': return 'Tecnología';
+              case 'Personal': return 'Personal';
+              default: return c;
+            }
+          })(a);
+          
+          const bTranslated = (function(c) {
+            switch(c) {
+              case 'Politics': return 'Política';
+              case 'Design': return 'Diseño';
+              case 'Technology': return 'Tecnología';
+              case 'Personal': return 'Personal';
+              default: return c;
+            }
+          })(b);
+          
+          return String(aTranslated).localeCompare(String(bTranslated));
+        });
+        
+        // Mapear cada categoría a su respectiva pill
+        return sortedCategories.map(cat => {
+          // Traducir la categoría al español
+          const translatedCat = (function(c) {
+            switch(c) {
+              case 'Politics': return 'Política';
+              case 'Design': return 'Diseño';
+              case 'Technology': return 'Tecnología';
+              case 'Personal': return 'Personal';
+              default: return c;
+            }
+          })(cat);
+          
+          // Convertir la categoría a slug
+          const catSlug = translatedCat === 'Política' ? 'politica' : 
+                         translatedCat === 'Diseño' ? 'diseno' : 
+                         translatedCat === 'Tecnología' ? 'tecnologia' : 
+                         translatedCat === 'Personal' ? 'personal' : 
+                         String(translatedCat).toLowerCase();
+          
+          // Determinar si esta categoría está activa
+          const isActive = category === translatedCat;
+          
+          return (
+            <a 
+              href={`/category/${catSlug}`} 
+              class={`inline-flex px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${
+                isActive 
+                  ? 'bg-accent-600 text-white' 
+                  : 'bg-white dark:bg-primary-900 border border-primary-200 dark:border-primary-700 text-primary-700 dark:text-primary-300 hover:border-accent-400 dark:hover:border-accent-400 transition-colors'
+              }`}
+            >
+              {translatedCat}
+            </a>
+          );
+        });
+        // No ordenamos aquí para evitar errores con props.children
+        // En su lugar, ordenamos las categorías antes de mapearlas
+      })()}
     </div>
   </div>
   

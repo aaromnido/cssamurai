@@ -2,7 +2,7 @@
 title: "Mi particular apocalipsis"
 description: "Reflexiones personales sobre un cambio inesperado en mi carrera profesional y las lecciones aprendidas."
 pubDate: 2012-12-18
-category: "Technology"
+category: "Personal"
 image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 imageOptional: "landlord-frienship-1024x1024.jpg"
 readingTime: "4"
