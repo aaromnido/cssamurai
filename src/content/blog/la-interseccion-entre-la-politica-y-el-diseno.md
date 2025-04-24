@@ -1,5 +1,5 @@
 ---
-title: "La Intersección de la Política y el Diseño"
+title: "La Intersección entre la Política y el Diseño"
 description: "Explorando cómo los movimientos políticos han utilizado principios de diseño para comunicar su mensaje de manera efectiva a lo largo de la historia."
 pubDate: 2023-11-15
 category: "Politics"
