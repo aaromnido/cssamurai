@@ -97,6 +97,7 @@ const categories = Array.from(categoryMap.entries()).map(([name, count]) => ({
           pubDate: post.data.pubDate,
           category: translateCategory(post.data.category),
           image: post.data.image,
+          imageOptional: post.data.imageOptional,
           readingTime: post.data.readingTime
         }} />
       ))}

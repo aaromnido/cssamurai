@@ -14,6 +14,11 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 const formattedDate = formatDate(post.data.pubDate);
+
+// Determinar qué imagen mostrar
+const imageSrc = post.data.imageOptional 
+  ? `/article-images/${post.data.imageOptional}` 
+  : post.data.image;
 ---
 
 <Layout title={`${post.data.title} | cssamurai`} description={post.data.description} image={post.data.image}>
@@ -38,10 +43,10 @@ const formattedDate = formatDate(post.data.pubDate);
       </div>
     </header>
     
-    {post.data.image && (
+    {imageSrc && (
       <div class="mb-8 rounded-lg overflow-hidden">
         <img 
-          src={post.data.image} 
+          src={imageSrc} 
           alt={post.data.title} 
           class="w-full"
         />

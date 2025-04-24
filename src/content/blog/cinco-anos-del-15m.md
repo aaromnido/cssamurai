@@ -4,6 +4,7 @@ description: "Reflexiones sobre el quinto aniversario del movimiento 15M y su im
 pubDate: 2016-05-15
 category: "Politics"
 image: "https://images.pexels.com/photos/6953525/pexels-photo-6953525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+imageOptional: "spanishrevolution.jpg"
 readingTime: "5"
 ---
 

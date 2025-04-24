@@ -9,20 +9,26 @@ interface Props {
     pubDate: Date;
     category: string;
     image?: string;
+    imageOptional?: string;
     readingTime?: string;
   };
 }
 
 const { post } = Astro.props;
 const formattedDate = formatDate(post.pubDate);
+
+// Determinar qué imagen mostrar
+const imageSrc = post.imageOptional 
+  ? `/article-images/${post.imageOptional}` 
+  : post.image;
 ---
 
 <article class="relative overflow-hidden group">
   <a href={`/blog/${post.slug}`} class="block">
     <div class="aspect-[16/9] bg-primary-100 dark:bg-primary-800 overflow-hidden rounded-xl mb-4">
-      {post.image ? (
+      {imageSrc ? (
         <img 
-          src={post.image} 
+          src={imageSrc} 
           alt={post.title} 
           class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
           loading="lazy"

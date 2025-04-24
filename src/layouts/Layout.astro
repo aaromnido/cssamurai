@@ -54,6 +54,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <ViewTransitions />
 
     <script is:inline>
+      // Script que se ejecuta inmediatamente para evitar parpadeos
       const theme = localStorage.getItem('theme') || 'light';
       document.documentElement.classList.toggle('dark', theme === 'dark');
       window.localStorage.setItem('theme', theme);
@@ -99,15 +100,26 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <Footer />
     
     <script>
+      // Esta función se ejecuta en cada transición de página
       document.addEventListener('astro:page-load', () => {
-        const themeToggle = document.getElementById('theme-toggle');
+        // Aplicar el tema guardado en localStorage en cada carga de página
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.classList.toggle('dark', savedTheme === 'dark');
         
+        // Configurar el botón de cambio de tema
+        const themeToggle = document.getElementById('theme-toggle');
         if (themeToggle) {
           themeToggle.addEventListener('click', () => {
             const isDark = document.documentElement.classList.toggle('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
           });
         }
+      });
+      
+      // Asegurarse de que el tema se mantenga durante las transiciones
+      document.addEventListener('astro:after-swap', () => {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.classList.toggle('dark', savedTheme === 'dark');
       });
     </script>
   </body>

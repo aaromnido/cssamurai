@@ -8,6 +8,7 @@ const blog = defineCollection({
     pubDate: z.date(),
     category: z.enum(['Politics', 'Design', 'Technology']),
     image: z.string().optional(),
+    imageOptional: z.string().optional(),
     readingTime: z.string().optional(),
   }),
 });
