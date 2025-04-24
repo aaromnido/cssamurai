@@ -9,6 +9,7 @@ interface Props {
     pubDate: Date;
     category: string;
     image?: string;
+    readingTime?: string;
   };
 }
 
@@ -34,9 +35,16 @@ const formattedDate = formatDate(post.pubDate);
     </div>
     
     <div class="space-y-2">
-      <a href={`/category/${post.category.toLowerCase() === 'politics' ? 'politica' : post.category.toLowerCase() === 'design' ? 'diseno' : 'tecnologia'}`} class="text-xs font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider">
-        {post.category === 'Politics' ? 'Política' : post.category === 'Design' ? 'Diseño' : post.category === 'Technology' ? 'Tecnología' : post.category}
-      </a>
+      <div class="flex items-center text-xs gap-3 mb-2">
+        <a href={`/category/${post.category.toLowerCase() === 'política' ? 'politica' : post.category.toLowerCase() === 'diseño' ? 'diseno' : post.category.toLowerCase() === 'tecnología' ? 'tecnologia' : post.category.toLowerCase()}`} class="inline-block font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider bg-accent-100 dark:bg-accent-900/30 px-2 py-1 rounded">
+          {post.category}
+        </a>
+        {post.readingTime && (
+          <span class="inline-block text-primary-500 dark:text-primary-400 bg-primary-100 dark:bg-primary-800 px-2 py-1 rounded">
+            {post.readingTime.replace('min read', 'min de lectura')}
+          </span>
+        )}
+      </div>
       <h2 class="text-2xl sm:text-3xl font-bold leading-tight group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
         {post.title}
       </h2>

@@ -1,91 +1,23 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PostCard from '../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
 
-// Simulate blog posts data (in a real site, this would come from a CMS or Markdown files)
-const allPosts = [
-  {
-    slug: 'the-intersection-of-politics-and-design',
-    title: 'The Intersection of Politics and Design',
-    description: 'Exploring how political movements have utilized design principles to communicate their message effectively throughout history.',
-    pubDate: new Date('2023-11-15'),
-    category: 'Política',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    readingTime: '6 min read'
-  },
-  {
-    slug: 'ethical-considerations-in-ui-design',
-    title: 'Ethical Considerations in UI Design',
-    description: 'How designers should approach ethical dilemmas in user interface design to create more inclusive and responsible products.',
-    pubDate: new Date('2023-11-10'),
-    category: 'Diseño',
-    image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    readingTime: '4 min read'
-  },
-  {
-    slug: 'the-rise-of-ai-in-content-creation',
-    title: 'The Rise of AI in Content Creation',
-    description: 'Examining how artificial intelligence is changing the landscape of content creation and what it means for creators.',
-    pubDate: new Date('2023-11-05'),
-    category: 'Tecnología',
-    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    readingTime: '5 min read'
-  },
-  {
-    slug: 'censorship-in-digital-media',
-    title: 'Censorship in Digital Media',
-    description: 'A critical analysis of how censorship manifests in digital platforms and its implications for free speech.',
-    pubDate: new Date('2023-10-28'),
-    category: 'Política',
-    image: 'https://images.pexels.com/photos/6953525/pexels-photo-6953525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    readingTime: '7 min read'
-  },
-  {
-    slug: 'minimalism-in-web-design',
-    title: 'Minimalism in Web Design',
-    description: 'Why less continues to be more in the evolution of web design, and how to apply minimalist principles effectively.',
-    pubDate: new Date('2023-10-20'),
-    category: 'Diseño',
-    image: 'https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    readingTime: '3 min read'
-  },
-  {
-    slug: 'open-source-software-revolution',
-    title: 'The Open Source Software Revolution',
-    description: 'How open source has transformed software development and why it matters for the future of technology.',
-    pubDate: new Date('2023-10-15'),
-    category: 'Tecnología',
-    image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    readingTime: '6 min read'
-  },
-  {
-    slug: 'political-polarization-in-social-media',
-    title: 'Political Polarization in Social Media',
-    description: 'Investigating how social media algorithms contribute to political polarization and what can be done about it.',
-    pubDate: new Date('2023-10-10'),
-    category: 'Política',
-    image: 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    readingTime: '8 min read'
-  },
-  {
-    slug: 'principles-of-responsive-design',
-    title: 'Principles of Responsive Design',
-    description: 'A comprehensive look at the key principles that make responsive design effective in today\'s multi-device world.',
-    pubDate: new Date('2023-10-05'),
-    category: 'Diseño',
-    image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    readingTime: '5 min read'
-  },
-  {
-    slug: 'blockchain-beyond-cryptocurrency',
-    title: 'Blockchain Beyond Cryptocurrency',
-    description: 'Exploring the potential applications of blockchain technology beyond cryptocurrency in various industries.',
-    pubDate: new Date('2023-10-01'),
-    category: 'Tecnología',
-    image: 'https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    readingTime: '7 min read'
+// Obtener todos los artículos del blog desde la colección
+const allBlogPosts = await getCollection('blog');
+
+// Ordenar los artículos por fecha de publicación (más recientes primero)
+const allPosts = allBlogPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Función para traducir categorías de inglés a español
+const translateCategory = (category: string) => {
+  switch(category) {
+    case 'Politics': return 'Política';
+    case 'Design': return 'Diseño';
+    case 'Technology': return 'Tecnología';
+    default: return category;
   }
-];
+};
 ---
 
 <Layout title="Blog | cssamurai" description="Pensamientos sobre política, diseño y tecnología por cssamurai">
@@ -127,7 +59,15 @@ const allPosts = [
   
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {allPosts.map(post => (
-      <PostCard post={post} />
+      <PostCard post={{
+        slug: post.slug,
+        title: post.data.title,
+        description: post.data.description,
+        pubDate: post.data.pubDate,
+        category: translateCategory(post.data.category),
+        image: post.data.image,
+        readingTime: post.data.readingTime
+      }} />
     ))}
   </div>
 </Layout>
