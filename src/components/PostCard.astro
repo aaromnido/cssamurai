@@ -17,8 +17,8 @@ const { post } = Astro.props;
 const formattedDate = formatDate(post.pubDate);
 ---
 
-<article class="group overflow-hidden flex flex-col h-full">
-  <a href={`/blog/${post.slug}`} class="block h-full">
+<article class="group overflow-hidden flex flex-col h-full border border-primary-200 dark:border-primary-700 rounded-lg">
+  <a href={`/blog/${post.slug}`} class="block h-full p-4">
     <div class="aspect-[16/9] bg-primary-100 dark:bg-primary-800 overflow-hidden rounded-lg mb-4">
       {post.image ? (
         <img 
@@ -34,22 +34,23 @@ const formattedDate = formatDate(post.pubDate);
       )}
     </div>
     
-    <div class="flex-grow space-y-2">
-      <div class="flex items-center text-xs gap-3">
-        <a href={`/category/${post.category.toLowerCase() === 'politics' ? 'politica' : post.category.toLowerCase() === 'design' ? 'diseno' : 'tecnologia'}`} class="font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider">
-          {post.category === 'Politics' ? 'Política' : post.category === 'Design' ? 'Diseño' : post.category === 'Technology' ? 'Tecnología' : post.category}
-        </a>
+    <div class="flex-grow">
+      <!-- Etiquetas de categoría y tiempo de lectura -->
+      <div class="flex items-center text-xs gap-3 mb-3">
+        <span class="inline-block font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider bg-accent-100 dark:bg-accent-900/30 px-2 py-1 rounded">
+          {post.category === 'Politics' ? 'Política' : post.category}
+        </span>
         {post.readingTime && (
-          <span class="text-primary-500 dark:text-primary-400">
+          <span class="inline-block text-primary-500 dark:text-primary-400 bg-primary-100 dark:bg-primary-800 px-2 py-1 rounded">
             {post.readingTime.replace('min read', 'min de lectura')}
           </span>
         )}
       </div>
       
-      <h3 class="text-lg font-bold leading-tight group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
+      <h3 class="text-lg font-bold leading-tight group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors mb-2">
         {post.title}
       </h3>
-      <p class="text-primary-600 dark:text-primary-400 text-sm line-clamp-2">
+      <p class="text-primary-600 dark:text-primary-400 text-sm line-clamp-2 mb-3">
         {post.description}
       </p>
       <div class="text-xs text-primary-500 dark:text-primary-400">
