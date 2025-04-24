@@ -17,14 +17,14 @@ const featuredPost = sortedPosts[0];
 const recentPosts = sortedPosts.slice(1, 7);
 
 // Función para traducir categorías de inglés a español
-const translateCategory = (category: string) => {
+function translateCategory(category: string) {
   switch(category) {
     case 'Politics': return 'Política';
     case 'Design': return 'Diseño';
     case 'Technology': return 'Tecnología';
     default: return category;
   }
-};
+}
 
 // Calcular las categorías y sus conteos
 const categoryMap = new Map();
