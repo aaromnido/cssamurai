@@ -80,14 +80,14 @@ import Layout from '../layouts/Layout.astro';
       </a>
       
       <script is:inline>
-        // Función para ofuscar el correo electrónico y evitar spam
+        // Function to obfuscate email address and prevent spam
         document.getElementById('contactEmailLink').addEventListener('click', function(e) {
           e.preventDefault();
-          // Partes del correo electrónico divididas para evitar rastreadores
+          // Email parts split to avoid crawlers
           const partes = [97, 97, 114, 111, 109, 110, 105, 100, 111, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109];
-          // Convertir códigos ASCII a caracteres
+          // Convert ASCII codes to characters
           const email = partes.map(code => String.fromCharCode(code)).join('');
-          // Abrir cliente de correo
+          // Open mail client
           window.location.href = 'mailto:' + email;
         });
       </script>
