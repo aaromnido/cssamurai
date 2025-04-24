@@ -46,8 +46,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
     
-    <!-- Adobe Fonts (for sohne and gt-super) -->
-    <link rel="stylesheet" href="https://use.typekit.net/uhr3wfs.css">
+    <!-- Google Fonts (alternativas a sohne y gt-super) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <ViewTransitions />
 
@@ -59,7 +61,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <style is:global>
       article, .prose {
-        font-family: 'sohne', 'Helvetica Neue', Arial, sans-serif;
+        font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
         font-size: 20px;
         line-height: 1.8;
         letter-spacing: -0.003em;
@@ -70,7 +72,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       }
       
       article h1, article h2, article h3, .prose h1, .prose h2, .prose h3 {
-        font-family: 'gt-super', Georgia, Cambria, "Times New Roman", Times, serif;
+        font-family: 'Lora', Georgia, Cambria, "Times New Roman", Times, serif;
         letter-spacing: -0.015em;
       }
       
