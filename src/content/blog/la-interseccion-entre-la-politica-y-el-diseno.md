@@ -1,6 +1,6 @@
 ---
 title: "La Intersección entre la Política y el Diseño"
-description: "Explorando cómo los movimientos políticos han utilizado principios de diseño para comunicar su mensaje de manera efectiva a lo largo de la historia."
+description: "Explorando cómo los movimientos políticos utilizan principios de diseño para comunicar su mensaje, desde la propaganda política hasta las campañas digitales modernas, y su impacto en la percepción pública y movilización social."
 pubDate: 2023-11-15
 category: "Design"
 image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
