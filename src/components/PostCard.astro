@@ -41,8 +41,8 @@ const formattedDate = formatDate(post.pubDate);
           {post.category === 'Politics' ? 'Política' : post.category}
         </span>
         {post.readingTime && (
-          <span class="inline-block text-primary-500 dark:text-primary-400 bg-primary-100 dark:bg-primary-800 px-2 py-1 rounded">
-            {post.readingTime.replace('min read', 'min de lectura')}
+          <span class="inline-block text-primary-500 dark:text-primary-400 bg-primary-50 dark:bg-primary-800 px-2 py-1 rounded">
+            {post.readingTime} min de lectura
           </span>
         )}
       </div>

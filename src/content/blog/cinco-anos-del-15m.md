@@ -4,7 +4,7 @@ description: "Reflexiones sobre el quinto aniversario del movimiento 15M y su im
 pubDate: 2016-05-15
 category: "Politics"
 image: "https://images.pexels.com/photos/6953525/pexels-photo-6953525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-readingTime: "5 min read"
+readingTime: "5"
 ---
 
 Hoy se cumplen cinco años del ya mítico 15M. Comenzó siendo un día como cualquiera otro, para pasar a ser un de los días que han marcado la historia de este país.

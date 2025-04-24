@@ -4,7 +4,7 @@ description: "Experiencia impartiendo un taller de HTML para niños y las leccio
 pubDate: 2014-01-05
 category: "Technology"
 image: "https://images.pexels.com/photos/1181243/pexels-photo-1181243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-readingTime: "3 min read"
+readingTime: "3"
 ---
 
 Gran parte de lo que soy como profesional se lo debo a la comunidad, tutoriales, screencast, charlas y todo tipo de talleres y eventos. Por ello, desde hace tiempo, tengo la necesidad de devolver a la comunidad parte de ese capital. Y siguiendo esta idea, hace algunas semanas lancé a Teresa Oliver, @tolivern la idea de organizar un taller de HTML para niños. De tal modo que pudieran iniciarse en el mundo del desarrollo web. A Teresa le pareció una idea genial y recogió el guante. En pocos días ya tenía lugar y fechas. Así que solo quedaba, prepararlo, lanzarlo e impartirlo.

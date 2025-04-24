@@ -4,7 +4,7 @@ description: "Explorando cómo los movimientos políticos han utilizado principi
 pubDate: 2023-11-15
 category: "Politics"
 image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-readingTime: "6 min read"
+readingTime: "6"
 ---
 
 En un paisaje digital en constante evolución, las conexiones entre política, diseño y tecnología se vuelven cada vez más entrelazadas y complejas. Este artículo explora cómo estos tres dominios se influencian y se moldean mutuamente en el mundo moderno.

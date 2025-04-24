@@ -4,7 +4,7 @@ description: "Reflexiones sobre la importancia de la participación ciudadana en
 pubDate: 2014-05-20
 category: "Politics"
 image: "https://images.pexels.com/photos/1550337/pexels-photo-1550337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-readingTime: "3 min read"
+readingTime: "3"
 ---
 
 Primavera de 2015, En una apacible pequeña localidad, la gente acude a votar en una agradable y soleada mañana de domingo. Son las Elecciones Municipales y Autonómicas. ¿Pero que está ocurriendo? Los votantes se arremolinan ante las mesas repletas de papeletas de diferentes opciones políticas. Y lo que comienza siendo un murmullo, casi alcanza el nivel de algarabía.

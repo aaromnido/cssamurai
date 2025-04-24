@@ -4,7 +4,7 @@ description: "Una metáfora sobre la convivencia política en España y las posi
 pubDate: 2016-03-15
 category: "Politics"
 image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-readingTime: "3 min read"
+readingTime: "3"
 ---
 
 Una mañana de un domingo cualquiera, se escuchan gritos desde la cocina. Los hermanos discuten acaloradamente. Se diría que están a punto de llegar a las manos. Uno de ellos grita que quiere irse. Dice que no soporta la situación ni un minuto más. Que desde que fallecieron los padres las cosas han ido de mal en peor y ya entonces debería haberse marchado.

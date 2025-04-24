@@ -4,7 +4,7 @@ description: "Reflexiones personales sobre el momento político en España y las
 pubDate: 2016-06-10
 category: "Politics"
 image: "https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-readingTime: "4 min read"
+readingTime: "4"
 ---
 
 No cabe duda que nos hallamos ante un momento crucial de la historia de este país y de nuestras vidas. La repetición de las elecciones o segunda vuelta, según se quiera ver, representan desde mi punto de vista una nueva oportunidad para ganar la última institución democrática que se nos antepone, en pos de la transformación el estado. Parece como si los vientos de la historia estuvieran soplando en esa dirección. No en vano, el surgimiento del 15M francés "La nuit debout", el fenómeno Bernie Sanders en los EEUU, o Jeremy Corbin en Gran Bretaña así lo están poniendo de manifiesto.

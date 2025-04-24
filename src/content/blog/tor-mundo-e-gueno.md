@@ -4,7 +4,7 @@ description: "Reflexiones sobre mi búsqueda de empleo tras mi experiencia en Du
 pubDate: 2013-01-15
 category: "Design"
 image: "https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-readingTime: "5 min read"
+readingTime: "5"
 ---
 
 Hola amigos, tras un mes ajetreado de búsqueda de nuevo destino y proyectos varios en los que estoy participando, estoy de nuevo aquí para ofreceros una nueva entrega de las aventuras de este CSSamurai.

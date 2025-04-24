@@ -4,7 +4,7 @@ description: "Reflexiones sobre la corrupción política en España y la necesid
 pubDate: 2013-02-01
 category: "Politics"
 image: "https://images.pexels.com/photos/2265488/pexels-photo-2265488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-readingTime: "3 min read"
+readingTime: "3"
 ---
 
 Lo siento David, pero abandono tu bando. Adjuro de la partida #weareatwar. Y no porque no esté de acuerdo contigo, sino porque ya no tengo paciencia para hacer una guerra tranquila, optimista y de cara amable. Los últimos acontecimientos aparecidos en prensa (y lleva días goteando) son la gota que colma el vaso. Por si todavía alguien aún no se ha entreado o no se quiere enterar os lo dejo en dos sabores, en rojo y azul: El país y El Mundo
